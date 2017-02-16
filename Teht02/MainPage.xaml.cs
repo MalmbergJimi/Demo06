@@ -34,12 +34,7 @@ namespace Teht02
             markat = value * 5.95;
             euroinatextBlock.Text = markat.ToString("0.00");
         }
-        /* 
-         int value = int.Parse(truckstextBlock.Text); // "0" -> 0
-         value++;
-         truckstextBlock.Text = value.ToString(); // 1 -> "1"
-            */
-
+        
         private void eurobutton_Click(object sender, RoutedEventArgs e)
         {
             double eurot;
