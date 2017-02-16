@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="Teht02.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Teht02"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="markkabutton" Content="Muunna markoiksi"
+                HorizontalAlignment="Left" 
+                Margin="684,192,0,0" 
+                VerticalAlignment="Top" 
+                Height="50" 
+                Width="153"
+                Background="Aqua"
+                FontSize="15"
+                Click="markkabutton_Click"
+                
+                />
+        
+        <Button x:Name="eurobutton" Content="Muunna euroiksi" 
+                HorizontalAlignment="Left" 
+                Margin="446,192,0,0" 
+                VerticalAlignment="Top" 
+                Height="50" 
+                Width="153"
+                Background="LightBlue"
+                FontSize="15"
+                Click="eurobutton_Click"
+                
+                />
+        
+        <TextBlock x:Name="markkoinatextBlock" 
+                   HorizontalAlignment="Left" 
+                   Margin="446,271,0,0"
+                   TextWrapping="Wrap" 
+                   Text="0" 
+                   VerticalAlignment="Top" 
+                   Height="56"
+                   Width="153"
+                   FontSize="20"
+                   TextAlignment="Center"
+                   />
+        <TextBlock x:Name="euroinatextBlock" 
+                   HorizontalAlignment="Left" 
+                   Margin="684,271,0,0" 
+                   TextWrapping="Wrap" 
+                   Text="0" 
+                   VerticalAlignment="Top" 
+                   Height="56" 
+                   Width="153"
+                   FontSize="20"
+                   TextAlignment="Center"
+                   />
+        
+        <TextBox x:Name="MarkattextBox"
+                 HorizontalAlignment="Left" 
+                 Margin="684,98,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="0" 
+                 VerticalAlignment="Top" 
+                 Height="66" 
+                 Width="153"
+                 FontSize="20"
+                 />
+        <TextBox x:Name="EurottextBox"
+                 HorizontalAlignment="Left" 
+                 Margin="446,98,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="0" 
+                 VerticalAlignment="Top"
+                 Height="66" 
+                 Width="153"
+                 FontSize="20"
+                 />
+
+    </Grid>
+</Page>

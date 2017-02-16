@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace CarApp
+namespace Teht02
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -25,21 +25,27 @@ namespace CarApp
         public MainPage()
         {
             this.InitializeComponent();
-            //UI is ready
         }
 
-        private void trucksbutton_Click(object sender, RoutedEventArgs e)
+        private void markkabutton_Click(object sender, RoutedEventArgs e)
         {
-            int value = int.Parse(truckstextBlock.Text); // "0" -> 0
-            value++;
-            truckstextBlock.Text = value.ToString(); // 1 -> "1"
+            double markat;
+            int value = int.Parse(MarkattextBox.Text);
+            markat = value * 5.95;
+            euroinatextBlock.Text = markat.ToString("0.00");
         }
+        /* 
+         int value = int.Parse(truckstextBlock.Text); // "0" -> 0
+         value++;
+         truckstextBlock.Text = value.ToString(); // 1 -> "1"
+            */
 
-        private void carsbutton_Click(object sender, RoutedEventArgs e)
+        private void eurobutton_Click(object sender, RoutedEventArgs e)
         {
-            int value = int.Parse(carstextBlock.Text);
-            value++;
-            carstextBlock.Text = value.ToString();
+            double eurot;
+            int value = int.Parse(EurottextBox.Text);
+            eurot = value / 5.95;
+            markkoinatextBlock.Text = eurot.ToString("0.00");
         }
     }
 }
