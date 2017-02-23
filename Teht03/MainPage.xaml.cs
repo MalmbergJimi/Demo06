@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace Teht02
+namespace Teht03
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -27,20 +27,25 @@ namespace Teht02
             this.InitializeComponent();
         }
 
-        private void markkabutton_Click(object sender, RoutedEventArgs e)
+        private void laske_Click(object sender, RoutedEventArgs e)
         {
-            double markat;
-            double value = double.Parse(MarkattextBox.Text);
-            markat = value * 5.95;
-            euroinatextBlock.Text = markat.ToString("0.00");
-        }
-        
-        private void eurobutton_Click(object sender, RoutedEventArgs e)
-        {
-            double eurot;
-            double value = double.Parse(EurottextBox.Text);
-            eurot = value / 5.95;
-            markkoinatextBlock.Text = eurot.ToString("0.00");
+            double korkeus; double leveys; double karmi;
+            double value1 = double.Parse(KorkeusTeksti.Text);
+            korkeus = value1;
+
+            double value2 = double.Parse(LeveysTeksti.Text);
+            leveys = value2;
+
+            double value3 = double.Parse(KarminleveysTeksti.Text);
+            karmi = value3;
+
+            double lasipa = korkeus * leveys;
+            double ikkunapa = (karmi + korkeus) * (leveys + karmi);
+            double piiri = (karmi * 2 + leveys + korkeus) * 2;
+
+            Ikkunanala.Text = ikkunapa.ToString("0.00");
+            Lasinala.Text = lasipa.ToString("0.00");
+            Karminpiiri.Text = piiri.ToString("0.00");
         }
     }
 }
